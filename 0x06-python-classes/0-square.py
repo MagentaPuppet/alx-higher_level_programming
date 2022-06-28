@@ -1,7 +1,10 @@
 #!/usr/bin/python3
-"""Class for a square"""
+"""Module for creating a class for a square"""
 class Square:
     """Empty class that defines a square"""
     def __init__(self):
-        """init method"""
+        """Init method for the square class"""
         pass
+
+if __name__ == "__main__":
+    pass
