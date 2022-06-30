@@ -23,7 +23,6 @@ def roman_to_int(roman_string):
                             tmp += roman_string[::-1][:(c)]
                             roman_string = tmp[::-1]
                             i+=1
-                            j+=1
                             if len(roman_string) == 0:
                                 i = length
         return num
