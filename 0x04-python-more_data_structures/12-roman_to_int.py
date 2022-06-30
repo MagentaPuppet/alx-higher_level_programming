@@ -9,10 +9,10 @@ def roman_to_int(roman_string):
                   7:[None, "DCC", "LXX", "VII"],
                   8:[None, "DCCC", "LXXX", "VIII"],
                   9:[None, "CM", "XC", "IX"]       }
-    length = len(roman_string)
     num = 0
     i = 0
     if type(roman_string) == str:
+        length = len(roman_string)
         while i < length:
             for c in range(len(roman_string[::-1])):
                 for key in dec_places:
