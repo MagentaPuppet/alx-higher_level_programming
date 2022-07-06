@@ -4,10 +4,16 @@
 
 class Square:
     """Class that defines a square
-    Private instance attribute: size
-    Instantiation with optional size: def __init__(self, size=0)
+
+    Private instance attribute: size.
+
+    Instantiation with optional size: def __init__(self, size=0).
+
     Public instance method: def area(self):
-    that returns the current square area
+    that returns the current square area.
+
+    Public instance method: def my_print(self):
+    that prints in stdout the square with the character #.
     """
     def __init__(self, size=0):
         """Init method for the square class"""
@@ -30,3 +36,9 @@ class Square:
         if not value >= 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+
+    def my_print(self):
+        for i in range(self.__size):
+            for j in range(self.__size):
+                print("#", end="")
+            print()
