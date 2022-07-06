@@ -7,7 +7,8 @@ class Square:
 
     Private instance attribute: size.
 
-    Instantiation with optional size: def __init__(self, size=0, position-(0, 0)).
+    Instantiation with optional size:
+    def __init__(self, size=0, position-(0, 0)).
 
     Public instance method: def area(self):
     that returns the current square area.
@@ -46,17 +47,16 @@ class Square:
     @position.setter
     def position(self, value):
         """Sets the position of the square"""
-        for i in value:
-            if not type(i) == int:
-                raise TypeError("position must be an integer")
         if not len(value) == 2:
-            raise ValueError("position must be >= 0")
+            for i in value:
+                if not type(i) == int:
+                    raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
     def my_print(self):
         if self.size != 0:
             for y_coord in range(self.__position[1]):
-                    print()
+                print()
             for i in range(self.__size):
                 for x_coord in range(self.__position[0]):
                     print(end=" ")
