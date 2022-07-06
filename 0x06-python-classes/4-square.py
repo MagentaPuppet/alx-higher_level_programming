@@ -3,28 +3,30 @@
 
 
 class Square:
-    """Class that defines a square"""
+    """Class that defines a square
+    Private instance attribute: size
+    Instantiation with optional size: def __init__(self, size=0)
+    Public instance method: def area(self):
+    that returns the current square area
+    """
     def __init__(self, size=0):
         """Init method for the square class"""
-        self.__ispositiveint(size)
         self.__size = size
-        self.size = size
-
-    def __ispositiveint(self, value):
-        if not type(value) == int:
-            raise TypeError("size must be in integer")
-        if not value >= 0:
-            raise ValueError("size must be >= 0")
-        return True
 
     def area(self):
-        self.__ispositiveint(self.size)
-        return self.size ** 2
+        """Returns the area of the square"""
+        return self.__size ** 2
 
+    @property
     def size(self):
-        self.__ispositiveint(self.size)
-        return self.size
+        """Gets the size of the square"""
+        return self.__size
 
+    @size.setter
     def size(self, value):
-        self.__ispositiveint(value)
-        self.size = value
+        """Sets the size of the square"""
+        if not type(value) == int:
+            raise TypeError("size must be an integer")
+        if not value >= 0:
+            raise ValueError("size must be >= 0")
+        self.__size = value
