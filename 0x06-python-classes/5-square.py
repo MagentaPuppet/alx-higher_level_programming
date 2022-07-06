@@ -17,7 +17,7 @@ class Square:
     """
     def __init__(self, size=0):
         """Init method for the square class"""
-        self.__size = size
+        self.size = size
 
     def area(self):
         """Returns the area of the square"""
@@ -38,6 +38,7 @@ class Square:
         self.__size = value
 
     def my_print(self):
+        """Prints the square to stdout"""
         if self.size != 0:
             for i in range(self.__size):
                 for j in range(self.__size):
