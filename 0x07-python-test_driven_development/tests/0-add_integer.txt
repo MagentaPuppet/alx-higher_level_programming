@@ -4,7 +4,7 @@ The ''0-add_integer'' module
 Using ''add_integer''
 ---------------------
 
-Importing ''factorial'' from the ''example'' module:
+Importing ''add_integer'' from the ''0-add_integer'' module:
 
 	>>> add_integer = __import__('0-add_integer').add_integer
 
@@ -28,3 +28,11 @@ Test cases:
 
 	>>> add_integer(-100.6, 60.2)
 	-40
+
+	>>> add_integer(float('NaN'))
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer
+
+	>>> add_integer(1000e1000)
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
