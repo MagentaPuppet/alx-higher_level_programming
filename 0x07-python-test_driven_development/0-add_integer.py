@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Module that contains a function for adding two numbers"""
+
+
 def add_integer(a, b=98):
     """Functions that adds two numbers"""
     if type(a) not in [int, float]:
