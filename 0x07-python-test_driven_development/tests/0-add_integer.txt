@@ -1,0 +1,30 @@
+The ''0-add_integer'' module
+==========================
+
+Using ''add_integer''
+---------------------
+
+Importing ''factorial'' from the ''example'' module:
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Test cases:
+
+	>>> add_integer(1, 2)
+	3
+
+	>>> add_integer(100, -2)
+	98
+
+	>>> add_integer(-100, 60)
+	-40
+
+	>>> add_integer(0)
+	98
+
+	>>> add_integer("name", "blame")
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer(-100.6, 60.2)
+	-40
