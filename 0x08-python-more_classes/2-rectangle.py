@@ -11,6 +11,12 @@ class Rectangle:
 
     Instantiation with optional width and height:
     def __init__(self, width=0, height=0):
+
+    Public instance method: def area(self):
+    that returns the rectangle area
+
+    Public instance method: def perimeter(self):
+    that returns the rectangle perimeter
     """
     def __init__(self, width=0, height=0):
         """init method for the class Rectangle"""
@@ -44,3 +50,13 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def area(self):
+        """returns the rectangle's area"""
+        return self._height * self.__width
+
+    def perimeter(self):
+        """returns the rectangle's perimeter"""
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        return 2*(self._height + self.__width)
