@@ -11,6 +11,8 @@ class Rectangle:
 
     Public class attribute: number_of_instances
 
+    Public class attribute: print_symbol
+
     Instantiation with optional width and height:
     def __init__(self, width=0, height=0):
 
@@ -29,6 +31,7 @@ class Rectangle:
     when an instance of Rectangle is deleted
     """
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """init method for the class Rectangle"""
@@ -80,7 +83,7 @@ class Rectangle:
         if not (self.__width == 0 or self.__height == 0):
             for i in range(self.__height):
                 for j in range(self.__width):
-                    string += "#"
+                    string += str(self.print_symbol)
                 string += "\n"
         return string[:-1]
 
