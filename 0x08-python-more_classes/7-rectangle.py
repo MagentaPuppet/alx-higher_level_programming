@@ -83,7 +83,7 @@ class Rectangle:
         if not (self.__width == 0 or self.__height == 0):
             for i in range(self.__height):
                 for j in range(self.__width):
-                    string += str(self.print_symbol)
+                    string += str(Rectangle.print_symbol)
                 string += "\n"
         return string[:-1]
 
