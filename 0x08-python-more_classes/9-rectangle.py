@@ -35,8 +35,8 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """init method for the class Rectangle"""
-        self.height = height
         self.width = width
+        self.height = height
         self.number_of_instances += 1
 
     @property
@@ -120,3 +120,7 @@ class Rectangle:
         with width == height == size
         """
         return cls(size, size)
+
+my_square = Rectangle.square(-2)
+print("Area: {} - Perimeter: {}".format(my_square.area(), my_square.perimeter()))
+print(my_square)
