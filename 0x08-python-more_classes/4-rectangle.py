@@ -17,6 +17,11 @@ class Rectangle:
 
     Public instance method: def perimeter(self):
     that returns the rectangle perimeter
+
+    print() and str() should print the rectangle with the character #
+
+    repr() should return a string representation of the rectangle
+    to be able to recreate a new instance by using eval()
     """
     def __init__(self, width=0, height=0):
         """init method for the class Rectangle"""
@@ -72,5 +77,8 @@ class Rectangle:
         return string[:-1]
 
     def __repr__(self):
+        """returns the string representation of the rectangle
+        to be able to create a new instance by using eval()
+        """
         return "{}({}, {})".format(
           type(self).__name__, self.__width, self.__height)
